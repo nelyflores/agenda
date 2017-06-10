@@ -51,10 +51,22 @@ function generar(){
 }
 function filtrarContacto(e){
   e.preventDefault();
-var filtro=$("#search").val();
-var contactos=$(".contact");
-console.log(contactos);
+var filtro=$("#search").val().toLowerCase();
+var $contactos=$(".contact").find(".title");
+
+$contactos.each(function(indice,elemento){
+  var nombreContacto=$(elemento).text();
+  var $contacto=$(this).parents(".contact");
+    if(nombreContacto.toLowerCase(). indexOf(filtro)>=0){
+      $contacto.show();
+      console.log(nombreContacto);
+    }else{
+      $contacto.hide()
+  }
+
+});
 
 
-}
+
+};
 	$(document).ready(cargarPagina);

@@ -1,102 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Contactos</title>
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-  <body>
-    <div class="navbar-fixed">
-       <nav>
-         <div class="nav-wrapper  light-blue darken-3">
-           <a href="#!" class="brand-logo"><i class="material-icons">import_contacts</i>Contactos</a>
-         </div>
-       </nav>
-     </div>
-     <div class="fixed-action-btn toolbar">
-       <a class="btn-floating btn-large   light-blue darken-3">
-         <i class="material-icons">reorder</i>
-       </a>
-       <ul>
-         <li class="waves-effect waves-light"><a  href="#modal1"><i class="material-icons">person_add</i></a></li>
-         <li class="waves-effect waves-light"><a href="#modal2"><i class="material-icons">search</i></a></li>
-       </ul>
-     </div>
-     <div class="collection">
-       <a href="#!" class="collection-item"><span  id="contactostotal" class="new badge">0</span> Mostrando contactos</a>
-     </div>
-     <div class="col s12 m7">
-       <ul class="collection" id="listas">
-       </ul>
-     </div>
-      <!--Modales-->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <div class="row">
-          <form class="col s12">
-            <h5>Agregar contactos</h5>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="nombre" type="text" class="validate">
-                <label for="password">Nombre</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">phone</i>
-                <input id="telefono" type="tel" class="validate">
-                <label for="ntelefono">Telefono</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">mail</i>
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
+<head>
+  <meta charset="utf-8">
+  <title>Contactos</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper  light-blue darken-3">
+        <a href="#!" class="brand-logo"><i class="material-icons">import_contacts</i>Contactos</a>
+      </div>
+    </nav>
+  </div>
+  <div class="fixed-action-btn toolbar">
+    <a class="btn-floating btn-large   light-blue darken-3">
+      <i class="material-icons">reorder</i>
+    </a>
+    <ul>
+      <li class="waves-effect waves-light"><a  href="#modal1"><i class="material-icons">person_add</i></a></li>
+      <li class="waves-effect waves-light"><a href="#modal2"><i class="material-icons">search</i></a></li>
+    </ul>
+  </div>
+  <div class="collection">
+    <a href="#!" class="collection-item"><span  id="contactostotal" class="new badge">0</span> Mostrando contactos</a>
+  </div>
+  <div class="col s12 m7">
+    <ul class="collection" id="listas">
+    </ul>
+  </div>
+  <!--Modales-->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <form class="col s12">
+          <h5>Agregar contactos</h5>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="nombre" type="text" class="validate">
+              <label for="password">Nombre</label>
             </div>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-light btn" id="agregar"><i class="material-icons">person_add</i></a>
-      </div>
-     </div>
-
-
-
-     <div id="modal2" class="modal">
-       <div class="modal-content">
-         <div class="row">
-           <form class="col s12" id="form-busqueda">
-             <h5>Buscar contactos</h5>
-             <div class="row">
-               <div class="col s12">
-
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="telefono" type="tel" class="validate">
+              <label for="ntelefono">Telefono</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mail</i>
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
         </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-light btn" id="agregar"><i class="material-icons">person_add</i></a>
+    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <form class="col s12" id="form-busqueda">
+          <h5>Buscar contactos</h5>
+          <div class="row">
+            <div class="col s12">
 
-
-           </div>
-         </form>
-       </div>
-       <div class="modal-footer">
-         <a href="#!" class="modal-action modal-close waves-effect waves-light btn" id="buscar"><i class="material-icons">person_add</i></a>
-       </div>
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-light btn" id="buscar"><i class="material-icons">search</i></a>
+        </div>
       </div>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/modales.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
-</html>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/modales.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+    </body>
+    </html>
