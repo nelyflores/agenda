@@ -1,6 +1,8 @@
 
 function cargarPagina(){
   $("#agregar").click(generar);
+  $("#buscar").click(filtrarContacto)
+
 };
 
 
@@ -13,7 +15,7 @@ function generar(){
   var $nuevomail=$("#email").val();
   var $lista=$("#listas");
   //creamos elementos
-  var $elementolista=$("<li>",{'class':'collection-item avatar'});
+  var $elementolista=$("<li>",{'class':'collection-item avatar contact'});
   var $imagen=$("<img>",{"class":"circle"});
   var $titulo=$("<span>",{"class":"title"});
   var $nombre=document.createTextNode($nuevonombre);
@@ -45,6 +47,14 @@ function generar(){
   var $totalcontacto=$numerocontactos.length;
   console.log($totalcontacto);
   $total.text=$totalcontacto;
+
+}
+function filtrarContacto(e){
+  e.preventDefault();
+var filtro=$("#search").val();
+var contactos=$(".contact");
+console.log(contactos);
+
 
 }
 	$(document).ready(cargarPagina);
